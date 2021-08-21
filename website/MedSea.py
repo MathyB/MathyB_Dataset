@@ -9,7 +9,7 @@ from st_aggrid import AgGrid
 import webbrowser
 from load_css import local_css
 
-st.beta_page_config(page_title='MedSea', page_icon = favicon, layout = 'wide', initial_sidebar_state = 'auto')
+st.set_page_title('MedSea')
 
 local_css("website/style.css")
 
