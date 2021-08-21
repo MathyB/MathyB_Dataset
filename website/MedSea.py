@@ -293,7 +293,7 @@ def main():
       				output='0'	
 	
 	if c3:
-		data = st.text_area("Enter text to check for ME", "Functionality to be moved to 'Commons RNG' (cf. RNG-140).") 
+		data = st.text_area("Enter text to check for ME", "scenario 1: min: x + y x, y >= 0 9000x + y >= 0 10000x + y >= 2000 x >= 2 scenario 2: min: x + y x, y >= 0 9.0E15x + 1.0E12y >= 0 1.1e16x + 1.0e12y >= 2.0e15 1.0e12x >= 2e12 for scenario 1, it works out. but for scenario 2 whose constrains are just scaled up by 1e12, the solver reports unbounded solution.") 
 	
 		
 		if st.button("Run"):
