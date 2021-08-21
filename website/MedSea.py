@@ -234,92 +234,21 @@ def main():
 		c5='5'
 	
 	if st.button('1'):
-		data = st.text_area("Enter text to check for ME", ""From https://stackoverflow.com/questions/68427448/how-to-find-the-inverse-of-a-matrix-using-apache-commons-math-library-in-java/68427869?noredirect=1#comment120932354_68427869
-Reproducible example
+		data = st.text_area("Enter text to check for ME", "The following code:
 
-import org.apache.commons.math3.linear.FieldLUDecomposition;
-import org.apache.commons.math3.linear.FieldMatrix;
-import org.apache.commons.math3.linear.MatrixUtils;
-import org.apache.commons.math3.util.BigReal;
-
-public class REPREX {
-    public static void main(String[] args) {
-        BigReal[][] leftMatrixData = new BigReal[][]{
-                {new BigReal(1), new BigReal(0), new BigReal(0), new BigReal(0)},
-                {new BigReal(1), new BigReal(0), new BigReal(1), new BigReal(0)},
-                {new BigReal(1), new BigReal(1), new BigReal(0), new BigReal(0)},
-                {new BigReal(1), new BigReal(1), new BigReal(1), new BigReal(1)},
-        };
-
-        FieldMatrix<BigReal> leftMatrix = MatrixUtils.createFieldMatrix(leftMatrixData);
-        FieldMatrix<BigReal> leftMatrixInverse = new FieldLUDecomposition<>(leftMatrix)
-                .getSolver()
-                .getInverse();
-//  Exception in thread ""main"" org.apache.commons.math3.exception.MathArithmeticException: zero not allowed here
-//	  at org.apache.commons.math3.util.BigReal.divide(BigReal.java:255)
-//	  at org.apache.commons.math3.util.BigReal.divide(BigReal.java:39)
-//	  at org.apache.commons.math3.linear.FieldLUDecomposition.<init>(FieldLUDecomposition.java:160)
-//	  at stackoverflow.math.matrix.REPREX.main(REPREX.java:18)
-    }
-}
+final UnivariateFunction f = PolynomialsUtils.createHermitePolynomial(deg);
+final double integ = new SimpsonIntegrator(9, 50).integrate(1100, f, 0, 0.5);
 
 
-Possible reason:
+terminates as expected, while this one
 
-In FieldLUDecomposition line 130-133
-
-                if (lu[nonZero][col].equals(field.getZero())) {
-                    // try to select a better permutation choice
-                    ++nonZero;
-                }
+final UnivariateFunction f = PolynomialsUtils.createHermitePolynomial(deg);
+final double integ = new SimpsonIntegrator(10, 50).integrate(1100, f, 0, 0.5);
 
 
-Which produce incorrect result when lu[nonZeror][col] the BigDecimal val has different scale 
- to field.getZero() scale. as the BigReal#equals is comparing using BigDecimal#equals
-Workaround
+raises an exception:
 
-I tried to copy class BigReal and BigRealField to FixBigReal and FixBigRealField and replace all BigReal to FixBigReal inside. Then override FixBIgReal#equals and {{FixBIgReal#hashcode }}as
-
-    @Override
-    public boolean equals(Object other) {
-        if (this == other) {
-            return true;
-        }
-
-        if (other instanceof FixBigReal) {
-            return d.compareTo(((FixBigReal) other).d) == 0;
-        }
-        return false;
-    }
-...
-    @Override
-    public int hashCode() {
-        return Double.hashCode(d.doubleValue());
-    }
-
-
-Then the below program will not throw error
-
-import org.apache.commons.math3.linear.FieldLUDecomposition;
-import org.apache.commons.math3.linear.FieldMatrix;
-import org.apache.commons.math3.linear.MatrixUtils;
-import org.apache.commons.math3.util.BigReal;
-
-public class MVE {
-    public static void main(String[] args) {
-        FixBigReal[][] leftMatrixData = new FixBigReal[][]{
-                {new FixBigReal(1), new FixBigReal(0), new FixBigReal(0), new FixBigReal(0)},
-                {new FixBigReal(1), new FixBigReal(0), new FixBigReal(1), new FixBigReal(0)},
-                {new FixBigReal(1), new FixBigReal(1), new FixBigReal(0), new FixBigReal(0)},
-                {new FixBigReal(1), new FixBigReal(1), new FixBigReal(1), new FixBigReal(1)},
-        };
-
-        FieldMatrix<FixBigReal> leftMatrix = MatrixUtils.createFieldMatrix(leftMatrixData);
-        FieldMatrix<FixBigReal> leftMatrixInverse = new FieldLUDecomposition<>(leftMatrix)
-                .getSolver()
-                .getInverse();
-    }
-}"") 
+TooManyEvaluationsException: illegal state: maximal count (1,100) exceeded: evaluations") 
 	
 		
 		if st.button("Run"):
