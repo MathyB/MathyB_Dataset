@@ -210,7 +210,7 @@ class MEFinder():
 
 
 def main():
-	st.markdown("<h1 style='text-align: center; border-style: groove; background-color:#D22B2B; font-family:times new roman; font-size:50px; background-image: red.jpg;'>MEDSEA <br><br><large>Demonstration shown in the paper</large><br><br> MATHEMATICAL EXPRESSIONS IN SOFTWARE ENGINEERING ARTIFACTS </h1>", unsafe_allow_html=True)
+	st.markdown("<h1 style='text-align: center; border-style: groove; background-color:#D22B2B; font-family:times new roman; font-size:25px; background-image: red.jpg;'>MEDSEA <br><br><large>Demonstration shown in the paper</large><br><br> MATHEMATICAL EXPRESSIONS IN SOFTWARE ENGINEERING ARTIFACTS </h1>", unsafe_allow_html=True)
 	st.text("")
 	st.text("")
 	col1,col2=st.columns(2)
