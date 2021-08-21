@@ -10,7 +10,7 @@ import webbrowser
 from load_css import local_css
 
 
-local_css("style.css")
+local_css("website/style.css")
 
 def remote_css(url):
     st.markdown(f'<link href="{url}" rel="stylesheet">', unsafe_allow_html=True)    
