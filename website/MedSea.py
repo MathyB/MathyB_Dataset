@@ -225,7 +225,8 @@ def main():
 	
 	with c1:
 		st.button('1',key="1")
-		data = st.text_area("Enter text to check for ME", "Functionality to be moved to 'Commons RNG' (cf. RNG-140).") 
+		if c1:
+			data = st.text_area("Enter text to check for ME", "Functionality to be moved to 'Commons RNG' (cf. RNG-140).") 
 		
 	with c2:
 		st.button('2',key="2")
