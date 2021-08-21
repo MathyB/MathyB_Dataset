@@ -9,7 +9,6 @@ from st_aggrid import AgGrid
 import webbrowser
 from load_css import local_css
 
-st.set_page_title('MedSea')
 
 local_css("website/style.css")
 
