@@ -225,7 +225,7 @@ def main():
 	c1,c2=st.columns(2)
 	
 	with c1:
-		data = st.text_area("", "scenario 1: min: x + y x, y >= 0 9000x + y >= 0 10000x + y >= 2000 x >= 2 scenario 2: min: x + y x, y >= 0 9.0E15x + 1.0E12y >= 0 1.1e16x + 1.0e12y >= 2.0e15 1.0e12x >= 2e12 for scenario 1, it works out. but for scenario 2 whose constrains are just scaled up by 1e12, the solver reports unbounded solution.",height=250) 
+		data = st.text_area("", "Several unit tests fail when upgrading to version 1.3 of ""Commons RNG"": [ERROR] Failures: [ERROR]   LogitTest.testDerivativesWithInverseFunction:195 maxOrder = 2 expected:<0.0> but was:<1.0658141036401503E-14> [ERROR]   EnumeratedIntegerDistributionTest.testMath1533:196 [ERROR]   EnumeratedIntegerDistributionTest.testSample:174 expected:<7.84> but was:<7.857073891264003> [ERROR]   MiniBatchKMeansClustererTest.testCompareToKMeans:86 Different score ratio 46.645378%!, diff points ratio: 34.716981% [ERROR]   CalinskiHarabaszTest.test_compare_to_skLearn:102 expected:<597.7763150683217> but was:<559.2829020672648> [ERROR]   MultiStartMultivariateOptimizerTest.testCircleFitting:76 expected:<69.9597> but was:<69.96228624385736> [ERROR]   MultiStartMultivariateOptimizerTest.testRosenbrock:114 numEval=873 [ERROR]   GaussianRandomGeneratorTest.testMeanAndStandardDeviation:37 expected:<1.0> but was:<0.9715310171501561> [ERROR]   NaturalRankingTest.testNaNsFixedTiesRandom:227 Array comparison failure",height=250) 
 	
 		
 		if st.button("Run",key="1"):
