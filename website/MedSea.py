@@ -232,7 +232,7 @@ def main():
 	with c6:
 		st.button('Try',key="6")
 	
-	if c1:
+	if st.button('1'):
 		data = st.text_area("Enter text to check for ME", "Functionality to be moved to 'Commons RNG' (cf. RNG-140).") 
 	
 		
@@ -263,7 +263,7 @@ def main():
       				st.error("ME not Found")
       				output='0'	
 				
-	if c2:
+	if st.button('2'):
 		data = st.text_area("Enter text to check for ME", "java.lang.StackOverflowError is thrown in: double x = -10_000; double ans1 = Gamma.digamma(x);  // stack overflow double ans2 = Gamma.trigamma(x); // stack overflow It would be nice if the methods returned NaN / Infinity, rather than abort calculations.") 
 	
 		
@@ -294,7 +294,7 @@ def main():
       				st.error("ME not Found")
       				output='0'	
 	
-	if c3:
+	if st.button('3'):
 		data = st.text_area("Enter text to check for ME", "scenario 1: min: x + y x, y >= 0 9000x + y >= 0 10000x + y >= 2000 x >= 2 scenario 2: min: x + y x, y >= 0 9.0E15x + 1.0E12y >= 0 1.1e16x + 1.0e12y >= 2.0e15 1.0e12x >= 2e12 for scenario 1, it works out. but for scenario 2 whose constrains are just scaled up by 1e12, the solver reports unbounded solution.") 
 	
 		
