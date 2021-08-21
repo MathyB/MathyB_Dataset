@@ -1,8 +1,8 @@
 # Mathematical Expressions in Software Engineering Artifacts
 ## MathyB dataset
 To run MEDSEA: A Mathematical Expression Detector Tool for Software Engineering Artifacts, download the dataset from https://zenodo.org/record/3965149#.YSDic44zZPY. <br>
-Change the <b>INPUT_PATH</b> in MEFinder.py to the location of the project in your local system and <b>OUTPUT_PATH</b> to the location in your local system where you want to save the output.
-Then execute
+Change the <b>INPUT_PATH</b> in MEFinder.py to the location of the project in your local system and <b>OUTPUT_PATH</b> to the location in your local system where you want to save the output. <br>
+Then run this command:
 ```python
 python MEFinder.py
 ```
