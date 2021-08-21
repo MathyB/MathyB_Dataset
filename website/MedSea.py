@@ -285,7 +285,7 @@ def main():
 	
 	st.markdown("<h2 style='text-align: center; border-style: groove; font-family:serif; font-size:20px;'> TRY IT YOURSELF </h2>", unsafe_allow_html=True)
 	
-	data = st.text_area("Enter text to check for ME", "",height=500) 
+	data = st.text_area("Enter text to check for ME", "",height=250) 
 	
 		
 	if st.button("Run",key="3"):
