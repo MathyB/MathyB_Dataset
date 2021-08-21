@@ -12,7 +12,7 @@
 $ python MEFinder.py
 ```
 <ul>
-<li> You can test our tool on custom input at the web version of our tool available at the <a href="https://share.streamlit.io/mathyb/mathyb_dataset/main/MEFinder.py">project site</a></li></ul>
+<li> You can test our tool on custom input at the web version of our tool available at the <a href="https://share.streamlit.io/mathyb/mathyb_dataset/main/website/MedSea.py">project site</a></li></ul>
 
 ### NNGen
 To evaluate NNGen with the modified data, download the dataset <b>NNGen_modified_data<b> from https://zenodo.org/record/3965149#.YSDic44zZPY and run the code from NNGen's Gihub repo https://github.com/Tbabm/nngen.
