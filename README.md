@@ -6,6 +6,7 @@
  <li><b>remove_status</b> in MEFinder.py manages whether MEDSEA should ignore URLs and collection of black listed words while scanning through the bug reports. Default value of <b>remove_status</b> is True. You can change its value between True and False according to your wish.</li>
 <li>Then run this command:</li>
 </ul>
+
 ```python
 $ python MEFinder.py
 ```
