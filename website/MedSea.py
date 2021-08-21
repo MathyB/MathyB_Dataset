@@ -8,7 +8,15 @@ import base64
 from st_aggrid import AgGrid
 import webbrowser
 from load_css import local_css
+from posting import Posting
+from tables import Tables
 
+
+pages = {'tables':Tables,'posting':Posting}
+
+choice = st.sidebar.radio("Choice your page: ",tuple(pages.keys()))
+
+pages[choice]()
 
 local_css("website/style.css")
 
@@ -32,9 +40,6 @@ RULE_FILE = 'ME_RULES.csv'
 
 me_rules = pd.read_csv(RULE_FILE)
 
-st.nav({
-page1: examples.py
-	)}
 
 
 class MEFinder():
