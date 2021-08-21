@@ -235,7 +235,7 @@ def main():
 	with c6:
 		c6='Try'
 	
-	if st.button('1',key=1):
+	if st.button('1'):
 		data = st.text_area("Enter text to check for ME", "Functionality to be moved to 'Commons RNG' (cf. RNG-140).") 
 	
 		
@@ -266,7 +266,7 @@ def main():
       				st.error("ME not Found")
       				output='0'	
 				
-	if st.button('2',key=2):
+	if st.button('2'):
 		data = st.text_area("Enter text to check for ME", "Functionality to be moved to 'Commons RNG' (cf. RNG-140).") 
 	
 		
@@ -297,7 +297,7 @@ def main():
       				st.error("ME not Found")
       				output='0'	
 	
-	if st.button('Try',key=6):
+	if st.button('Try'):
 		data = st.text_area("Enter text to check for ME", "Functionality to be moved to 'Commons RNG' (cf. RNG-140).") 
 	
 		
