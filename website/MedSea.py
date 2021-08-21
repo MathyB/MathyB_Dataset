@@ -326,7 +326,7 @@ def main():
       				output='0'
 				
 				
-	if c6:
+	if st.button('Try'):
 		data = st.text_area("Enter text to check for ME", "") 
 	
 		
