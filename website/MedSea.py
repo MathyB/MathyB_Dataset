@@ -234,21 +234,7 @@ def main():
 		c5='5'
 	
 	if st.button('1'):
-		data = st.text_area("Enter text to check for ME", "The following code:
-
-final UnivariateFunction f = PolynomialsUtils.createHermitePolynomial(deg);
-final double integ = new SimpsonIntegrator(9, 50).integrate(1100, f, 0, 0.5);
-
-
-terminates as expected, while this one
-
-final UnivariateFunction f = PolynomialsUtils.createHermitePolynomial(deg);
-final double integ = new SimpsonIntegrator(10, 50).integrate(1100, f, 0, 0.5);
-
-
-raises an exception:
-
-TooManyEvaluationsException: illegal state: maximal count (1,100) exceeded: evaluations") 
+		data = st.text_area("Enter text to check for ME", "Functionality to be moved to 'Commons RNG' (cf. RNG-140).") 
 	
 		
 		if st.button("Run"):
