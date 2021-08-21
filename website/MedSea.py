@@ -255,7 +255,7 @@ def main():
 				
 	
 	with c2:
-		data = st.text_area("", "java.lang.StackOverflowError is thrown in: double x = -10_000; double ans1 = Gamma.digamma(x);  // stack overflow double ans2 = Gamma.trigamma(x); // stack overflow It would be nice if the methods returned NaN / Infinity, rather than abort calculations.") 
+		data = st.text_area("", "java.lang.StackOverflowError is thrown in: double x = -10_000; double ans1 = Gamma.digamma(x);  // stack overflow double ans2 = Gamma.trigamma(x); // stack overflow It would be nice if the methods returned NaN / Infinity, rather than abort calculations.",height=500) 
 	
 		
 		if st.button("Run",key="2"):
@@ -285,7 +285,7 @@ def main():
 	
 	st.markdown("<h2 style='text-align: center; border-style: groove; font-family:serif; font-size:20px;'> TRY IT YOURSELF </h2>", unsafe_allow_html=True)
 	
-	data = st.text_area("Enter text to check for ME", "") 
+	data = st.text_area("Enter text to check for ME", "",height=500) 
 	
 		
 	if st.button("Run",key="3"):
