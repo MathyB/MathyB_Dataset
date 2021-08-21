@@ -221,11 +221,12 @@ def main():
 	st.text("")
 	st.text("")
 	
-	c1,c2,c6=st.columns(3)
+	c1,c2,c3,c6=st.columns(4)
 	
 	with c1:
 		st.button('1',key="1")
-	c2=st.button('2',key="2")
+	with c2:
+		st.button('2',key="2")
 	c3=st.button('3',key="3")
 	c6=st.button('Try',key="6")
 	
