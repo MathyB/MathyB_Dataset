@@ -32,6 +32,9 @@ RULE_FILE = 'ME_RULES.csv'
 
 me_rules = pd.read_csv(RULE_FILE)
 
+st.nav({
+page1: examples.py
+}}
 
 
 class MEFinder():
