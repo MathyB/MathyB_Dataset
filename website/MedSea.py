@@ -221,13 +221,11 @@ def main():
 	st.text("")
 	st.text("")
 	
-	c1,c2,c3,c4,c5,c6=st.columns(6)
+	c1,c2,c6=st.columns(3)
 	
 	c1=st.button('1',key="1")
 	c2=st.button('2',key="2")
 	c3=st.button('3',key="3")
-	c4=st.button('4',key="4")
-	c5=st.button('5',key="5")
 	c6=st.button('Try',key="6")
 	
 	if c1:
@@ -323,70 +321,9 @@ def main():
       				st.error("ME not Found")
       				output='0'
 				
-	if c4:
-		data = st.text_area("Enter text to check for ME", "Functionality to be moved to 'Commons RNG' (cf. RNG-140).") 
-	
-		
-		if st.button("Run"):
-			obj = MEFinder()
-			sample_info = {}
-			output = -1
-			remove_status = True
-			flag=[]
-			for rule_no in range(12):
-        			flag.append(obj.apply(sample_info, me_rules, data, rule_no, remove_status))
-			if(sum(flag)>0):
-				st.success("ME Found")
-				output='1'
-				try:
-				
-					final_output=pd.DataFrame(sample_info).T
-
-					#final_output.reset_index(inplace=True)
-					#final_output.rename(columns={'index': 'Bug_Id'},inplace=True)
-					#final_output['Output']=output
-					st.markdown(get_table_download_link(final_output), unsafe_allow_html=True)
-					ss=pd.DataFrame(sample_info)
-					st.dataframe(ss)
-				except:
-					st.success("File display unavailable")
-			else:
-      				st.error("ME not Found")
-      				output='0'	
-				
-	if c5:
-		data = st.text_area("Enter text to check for ME", "Functionality to be moved to 'Commons RNG' (cf. RNG-140).") 
-	
-		
-		if st.button("Run"):
-			obj = MEFinder()
-			sample_info = {}
-			output = -1
-			remove_status = True
-			flag=[]
-			for rule_no in range(12):
-        			flag.append(obj.apply(sample_info, me_rules, data, rule_no, remove_status))
-			if(sum(flag)>0):
-				st.success("ME Found")
-				output='1'
-				try:
-				
-					final_output=pd.DataFrame(sample_info).T
-
-					#final_output.reset_index(inplace=True)
-					#final_output.rename(columns={'index': 'Bug_Id'},inplace=True)
-					#final_output['Output']=output
-					st.markdown(get_table_download_link(final_output), unsafe_allow_html=True)
-					ss=pd.DataFrame(sample_info)
-					st.dataframe(ss)
-				except:
-					st.success("File display unavailable")
-			else:
-      				st.error("ME not Found")
-      				output='0'	
 				
 	if c6:
-		data = st.text_area("Enter text to check for ME", "Functionality to be moved to 'Commons RNG' (cf. RNG-140).") 
+		data = st.text_area("Enter text to check for ME", "") 
 	
 		
 		if st.button("Run"):
