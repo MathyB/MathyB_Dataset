@@ -221,7 +221,7 @@ def main():
 	st.text("")
 
 	st.markdown("<h2 style='text-align: center; border-style: ridge; font-family:serif; font-size:20px;'> EXAMPLES </h2>", unsafe_allow_html=True)
-
+	st.text("")
 	c1,c2=st.columns(2)
 	
 	with c1:
@@ -283,8 +283,9 @@ def main():
       				st.error("ME not Found")
       				output='0'	
 	
-	st.markdown("<h2 style='text-align: center; border-style: ridge; font-family:serif; font-size:20px; background-image: url('website/red.jpg')'> TRY IT YOURSELF </h2>", unsafe_allow_html=True)
-	
+	st.text("")
+	st.markdown("<h2 style='text-align: center; border-style: ridge; font-family:serif; font-size:20px;'> TRY IT YOURSELF </h2>", unsafe_allow_html=True)
+	st.text("")
 	data = st.text_area("Enter text to check for ME", "",height=250) 
 	
 		
