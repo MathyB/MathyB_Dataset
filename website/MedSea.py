@@ -9,7 +9,7 @@ from st_aggrid import AgGrid
 import webbrowser
 from load_css import local_css
 
-streamlit.set_page_config(page_title=MedSea, page_icon=None, layout='wide', initial_sidebar_state='auto')
+st.set_page_config(page_title=MedSea, page_icon=None, layout='wide', initial_sidebar_state='auto')
 local_css("website/style.css")
 
 def remote_css(url):
