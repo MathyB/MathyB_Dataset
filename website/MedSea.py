@@ -216,11 +216,8 @@ def main():
 	col1,col2=st.columns(2)
 	with col1:
 		st.markdown( """<a style='display: block; text-align: center; font-family:times new roman; font-size:15px;' href="https://github.com/MathyB/MathyB_Dataset">Code</a> """, unsafe_allow_html=True, )
-	with col2:
-		st.markdown( """<a style='display: block; text-align: center; font-family:times new roman; font-size:15px; ' href="https://share.streamlit.io/mathyb/mathyb_dataset/main/website/examples.py">Examples</a> """, unsafe_allow_html=True, )
-
+	
 		
-	#st.write("&emsp; &nbsp; [Code](https://github.com/Aaditree/MathyB_Dataset) &emsp; &nbsp;  &emsp; &nbsp;  &emsp; &nbsp; &emsp; [Paper]()")
 	st.text("")
 	st.text("")
 	
