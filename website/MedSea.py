@@ -9,7 +9,7 @@ from st_aggrid import AgGrid
 import webbrowser
 from load_css import local_css
 
-
+st.set_page_config(page_title="MedSea",layout='wide')
 local_css("website/style.css")
 
 def remote_css(url):
