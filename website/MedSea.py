@@ -223,17 +223,17 @@ def main():
 	
 	c1,c2,c3,c4,c5,c6=st.columns(6)
 	with c1:
-		st.button('1',key=1)
+		st.button('1')
 	with c2:
-		st.button('2',key=2)
+		st.button('2')
 	with c3:
-		st.button('3',key=3)
+		st.button('3')
 	with c4:
-		st.button('4',key=4)
+		st.button('4')
 	with c5:
-		st.button('5',key=5)
+		st.button('5')
 	with c6:
-		st.button('Try',key=6)
+		st.button('Try')
 	
 	if st.button('1'):
 		data = st.text_area("Enter text to check for ME", "Functionality to be moved to 'Commons RNG' (cf. RNG-140).") 
