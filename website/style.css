@@ -1,0 +1,28 @@
+.highlight {
+  border-radius: 0.4rem;
+  color: white;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 80px;
+}
+.bold {
+  padding-left: 1rem;
+  font-weight: 700;
+}
+.blue {
+  background-color: lightcoral;
+}
+.red {
+  background-color: lightblue;
+}
+
+.stButton>button {
+    color: #4F8BF9;
+    border-radius: 60%;
+    height: 3.5em;
+    width: 3.5em;
+}
+
+.stTextInput>div>div>input {
+    color: #000000;
+}
