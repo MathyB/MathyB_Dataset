@@ -7,6 +7,7 @@ import csv
 import base64
 from st_aggrid import AgGrid
 import webbrowser
+from load_css import local_css
 
 
 local_css("style.css")
