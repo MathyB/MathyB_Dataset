@@ -238,9 +238,7 @@ def main():
 				
 				final_output=pd.DataFrame(sample_info).T
 
-			#final_output.reset_index(inplace=True)
-			#final_output.rename(columns={'index': 'Bug_Id'},inplace=True)
-			#final_output['Output']=output
+			
 				st.markdown(get_table_download_link(final_output), unsafe_allow_html=True)
 				ss=pd.DataFrame(sample_info)
 				st.dataframe(ss)
