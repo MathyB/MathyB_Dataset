@@ -9,7 +9,7 @@ from st_aggrid import AgGrid
 import webbrowser
 from load_css import local_css
 
-st.set_page_config(page_title='MedSea', page_icon=None, layout='wide', initial_sidebar_state='auto')
+
 local_css("website/style.css")
 
 def remote_css(url):
@@ -210,49 +210,52 @@ class MEFinder():
 
 
 def main():
-	st.markdown("<h1 style='text-align: center; border-style: groove; background-color:#D22B2B; font-family:times new roman; font-size:25px; background-image: red.jpg;'>MEDSEA <br><br><small>Demonstration shown in the paper</small><br><br> MATHEMATICAL EXPRESSIONS IN SOFTWARE ENGINEERING ARTIFACTS </h1>", unsafe_allow_html=True)
+	st.markdown("<h1 style='text-align: center; border-style: groove; background-color:lightcoral; font-family:times new roman; font-size:40px bold;'>ME Finder <br> <small>Demonstration shown in the paper <br> MATHEMATICAL EXPRESSIONS IN SOFTWARE ENGINEERING ARTIFACTS</small></h1>", unsafe_allow_html=True)
+	#st.markdown("<h2 style='text-align: center; border-style: groove; background-color:lightcoral; font-family:times new roman; font-size:26px;'><small>Demonstration shown in the paper <br> MATHEMATICAL EXPRESSIONS IN SOFTWARE ENGINEERING ARTIFACTS</small></h2>", unsafe_allow_html=True)
 	st.text("")
 	st.text("")
 	col1,col2=st.columns(2)
 	with col1:
-		st.markdown( """<a style='display: block; text-align: center; font-family:times new roman; font-size:25px;' href="https://github.com/MathyB/MathyB_Dataset">Code</a> """, unsafe_allow_html=True, )
-	
-		
-	st.text("")
-	st.text("")
-	
-			
-	if st.button('Try'):
-		data = st.text_area("Enter text to check for ME", "") 
-	
-		
-		if st.button("Run"):
-			obj = MEFinder()
-			sample_info = {}
-			output = -1
-			remove_status = True
-			flag=[]
-			for rule_no in range(12):
-        			flag.append(obj.apply(sample_info, me_rules, data, rule_no, remove_status))
-			if(sum(flag)>0):
-				st.success("ME Found")
-				output='1'
-				try:
-				
-					final_output=pd.DataFrame(sample_info).T
+		#st.markdown("[Code](https://github.com/Aaditree/MathyB_Dataset)", unsafe_allow_html=True)
+		st.markdown( """<a style='display: block; text-align: center; font-family:times new roman; font-size:25px;' href="https://github.com/Aaditree/MathyB_Dataset">Code</a> """, unsafe_allow_html=True, )
+	#with col2:
+		#st.markdown("[Paper](https://www.overleaf.com/5588149215pwtgvwyktrtd)", unsafe_allow_html=True)
+		#st.markdown( """<a style='display: block; text-align: center; font-family:times new roman; font-size:25px; ' href="https://www.overleaf.com/5588149215pwtgvwyktrtd">Paper</a> """, unsafe_allow_html=True, )
 
-					#final_output.reset_index(inplace=True)
-					#final_output.rename(columns={'index': 'Bug_Id'},inplace=True)
-					#final_output['Output']=output
-					st.markdown(get_table_download_link(final_output), unsafe_allow_html=True)
-					ss=pd.DataFrame(sample_info)
-					st.dataframe(ss)
-				except:
-					st.success("File display unavailable")
-			else:
-      				st.error("ME not Found")
-      				output='0'	
+		
+	#st.write("&emsp; &nbsp; [Code](https://github.com/Aaditree/MathyB_Dataset) &emsp; &nbsp;  &emsp; &nbsp;  &emsp; &nbsp; &emsp; [Paper]()")
+	st.text("")
+	st.text("")
 	
+	data = st.text_area("Enter text to check for ME", "") 
+	
+		
+	if st.button("Run"):
+		obj = MEFinder()
+		sample_info = {}
+		output = -1
+		remove_status = True
+		flag=[]
+		for rule_no in range(12):
+        		flag.append(obj.apply(sample_info, me_rules, data, rule_no, remove_status))
+		if(sum(flag)>0):
+			st.success("ME Found")
+			output='1'
+			try:
+				
+				final_output=pd.DataFrame(sample_info).T
+
+			#final_output.reset_index(inplace=True)
+			#final_output.rename(columns={'index': 'Bug_Id'},inplace=True)
+			#final_output['Output']=output
+				st.markdown(get_table_download_link(final_output), unsafe_allow_html=True)
+				ss=pd.DataFrame(sample_info)
+				st.dataframe(ss)
+			except:
+				st.success("File display unavailable")
+		else:
+      			st.error("ME not Found")
+      			output='0'	
 		
 
 
