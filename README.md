@@ -10,7 +10,7 @@
 ```python
 $ python MEFinder.py
 ```
-
-The web version of our tool is available at the <a href="https://share.streamlit.io/mathyb/mathyb_dataset/main/MEFinder.py">project site</a>
+<ul>
+<li> You can test our tool on custom input at the web version of our tool available at the <a href="https://share.streamlit.io/mathyb/mathyb_dataset/main/MEFinder.py">project site</a></li></ul>
 ### NNGen
 We provide ME removed data for NNGen in this repo. Kindly refer to this Gihub repo https://github.com/Tbabm/nngen for commands on running the NNGen project.
