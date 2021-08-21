@@ -261,8 +261,8 @@ def main():
       				st.error("ME not Found")
       				output='0'	
 				
-	if st.button('2'):
-		data = st.text_area("Enter text to check for ME", "Functionality to be moved to 'Commons RNG' (cf. RNG-140).") 
+	if c2:
+		data = st.text_area("Enter text to check for ME", "java.lang.StackOverflowError is thrown in: double x = -10_000; double ans1 = Gamma.digamma(x);  // stack overflow double ans2 = Gamma.trigamma(x); // stack overflow It would be nice if the methods returned NaN / Infinity, rather than abort calculations.") 
 	
 		
 		if st.button("Run"):
@@ -292,7 +292,100 @@ def main():
       				st.error("ME not Found")
       				output='0'	
 	
-	if st.button('Try'):
+	if c3:
+		data = st.text_area("Enter text to check for ME", "Functionality to be moved to 'Commons RNG' (cf. RNG-140).") 
+	
+		
+		if st.button("Run"):
+			obj = MEFinder()
+			sample_info = {}
+			output = -1
+			remove_status = True
+			flag=[]
+			for rule_no in range(12):
+        			flag.append(obj.apply(sample_info, me_rules, data, rule_no, remove_status))
+			if(sum(flag)>0):
+				st.success("ME Found")
+				output='1'
+				try:
+				
+					final_output=pd.DataFrame(sample_info).T
+
+					#final_output.reset_index(inplace=True)
+					#final_output.rename(columns={'index': 'Bug_Id'},inplace=True)
+					#final_output['Output']=output
+					st.markdown(get_table_download_link(final_output), unsafe_allow_html=True)
+					ss=pd.DataFrame(sample_info)
+					st.dataframe(ss)
+				except:
+					st.success("File display unavailable")
+			else:
+      				st.error("ME not Found")
+      				output='0'
+				
+	if c4:
+		data = st.text_area("Enter text to check for ME", "Functionality to be moved to 'Commons RNG' (cf. RNG-140).") 
+	
+		
+		if st.button("Run"):
+			obj = MEFinder()
+			sample_info = {}
+			output = -1
+			remove_status = True
+			flag=[]
+			for rule_no in range(12):
+        			flag.append(obj.apply(sample_info, me_rules, data, rule_no, remove_status))
+			if(sum(flag)>0):
+				st.success("ME Found")
+				output='1'
+				try:
+				
+					final_output=pd.DataFrame(sample_info).T
+
+					#final_output.reset_index(inplace=True)
+					#final_output.rename(columns={'index': 'Bug_Id'},inplace=True)
+					#final_output['Output']=output
+					st.markdown(get_table_download_link(final_output), unsafe_allow_html=True)
+					ss=pd.DataFrame(sample_info)
+					st.dataframe(ss)
+				except:
+					st.success("File display unavailable")
+			else:
+      				st.error("ME not Found")
+      				output='0'	
+				
+	if c5:
+		data = st.text_area("Enter text to check for ME", "Functionality to be moved to 'Commons RNG' (cf. RNG-140).") 
+	
+		
+		if st.button("Run"):
+			obj = MEFinder()
+			sample_info = {}
+			output = -1
+			remove_status = True
+			flag=[]
+			for rule_no in range(12):
+        			flag.append(obj.apply(sample_info, me_rules, data, rule_no, remove_status))
+			if(sum(flag)>0):
+				st.success("ME Found")
+				output='1'
+				try:
+				
+					final_output=pd.DataFrame(sample_info).T
+
+					#final_output.reset_index(inplace=True)
+					#final_output.rename(columns={'index': 'Bug_Id'},inplace=True)
+					#final_output['Output']=output
+					st.markdown(get_table_download_link(final_output), unsafe_allow_html=True)
+					ss=pd.DataFrame(sample_info)
+					st.dataframe(ss)
+				except:
+					st.success("File display unavailable")
+			else:
+      				st.error("ME not Found")
+      				output='0'	
+				
+	if c6:
 		data = st.text_area("Enter text to check for ME", "Functionality to be moved to 'Commons RNG' (cf. RNG-140).") 
 	
 		
