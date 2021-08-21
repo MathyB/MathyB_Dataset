@@ -283,7 +283,7 @@ def main():
       				st.error("ME not Found")
       				output='0'	
 	
-	st.markdown("<h2 style='text-align: center; border-style: ridge; font-family:serif; font-size:20px; background-color: #00FFFF'> TRY IT YOURSELF </h2>", unsafe_allow_html=True)
+	st.markdown("<h2 style='text-align: center; border-style: ridge; font-family:serif; font-size:20px; background-image: url('website/red.jpg')'> TRY IT YOURSELF </h2>", unsafe_allow_html=True)
 	
 	data = st.text_area("Enter text to check for ME", "",height=250) 
 	
