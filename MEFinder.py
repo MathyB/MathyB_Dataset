@@ -220,14 +220,9 @@ def main():
 	st.text("")
 	col1,col2=st.columns(2)
 	with col1:
-		#st.markdown("[Code](https://github.com/MathyB/MathyB_Dataset)", unsafe_allow_html=True)
-		st.markdown( """<a style='display: block; text-align: center; font-family:times new roman; font-size:25px;' href="https://github.com/Aaditree/MathyB_Dataset">Code</a> """, unsafe_allow_html=True, )
-	#with col2:
-		#st.markdown("[Paper](https://www.overleaf.com/5588149215pwtgvwyktrtd)", unsafe_allow_html=True)
-		#st.markdown( """<a style='display: block; text-align: center; font-family:times new roman; font-size:25px; ' href="https://www.overleaf.com/5588149215pwtgvwyktrtd">Paper</a> """, unsafe_allow_html=True, )
-
+		st.markdown( """<a style='display: block; text-align: center; font-family:times new roman; font-size:25px;' href="https://github.com/MathyB/MathyB_Dataset">Code</a> """, unsafe_allow_html=True, )
+	
 		
-	#st.write("&emsp; &nbsp; [Code](https://github.com/Aaditree/MathyB_Dataset) &emsp; &nbsp;  &emsp; &nbsp;  &emsp; &nbsp; &emsp; [Paper]()")
 	st.text("")
 	st.text("")
 	
