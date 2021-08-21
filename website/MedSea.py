@@ -281,6 +281,8 @@ def main():
       				st.error("ME not Found")
       				output='0'	
 	
+	st.title("TRY IT YOURSELF")
+	
 	data = st.text_area("Enter text to check for ME", "") 
 	
 		
