@@ -9,6 +9,8 @@ from st_aggrid import AgGrid
 import webbrowser
 from load_css import local_css
 
+st.beta_set_page_config(page_title='MedSea', page_icon = favicon, layout = 'wide', initial_sidebar_state = 'auto')
+
 local_css("website/style.css")
 
 def remote_css(url):
