@@ -220,6 +220,38 @@ def main():
 	st.text("")
 	st.text("")
 	
+	c1,c2=st.columns(2)
+	
+	with c1:
+		data = st.text_area("Enter text to check for ME", "") 
+	
+		
+		if st.button("Run"):
+			obj = MEFinder()
+			sample_info = {}
+			output = -1
+			remove_status = True
+			flag=[]
+			for rule_no in range(12):
+        			flag.append(obj.apply(sample_info, me_rules, data, rule_no, remove_status))
+			if(sum(flag)>0):
+				st.success("ME Found")
+				output='1'
+				try:
+				
+					final_output=pd.DataFrame(sample_info).T
+
+			
+					st.markdown(get_table_download_link(final_output), unsafe_allow_html=True)
+					ss=pd.DataFrame(sample_info)
+					st.dataframe(ss)
+				except:
+					st.success("File display unavailable")
+			else:
+      				st.error("ME not Found")
+      				output='0'	
+		
+	
 	data = st.text_area("Enter text to check for ME", "") 
 	
 		
