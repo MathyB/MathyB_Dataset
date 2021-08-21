@@ -1,7 +1,9 @@
 # Mathematical Expressions in Software Engineering Artifacts
 ## MathyB dataset
-
-The dataset files are present in <b>MathyB Dataset files</b> folder. If you want to access the expressions captured by ME detector tool for all the projects, then those files are present in this <a href="https://drive.google.com/drive/folders/15BeaiKLpynYsgZNrJ_X0hnvFiA2H9NN-?usp=sharing" target="_blank">drive link</a>. </br>
+To run MEDSEA: A Mathematical Expression Detector Tool for Software Engineering Artifacts, download the dataset from https://zenodo.org/record/3965149#.YSDic44zZPY. Change the <b>INPUT_PATH</b> to the location of the project in your local system and <b>OUTPUT_PATH</b> to the location in your local system where you want to save the output.
+Then execute '''python
+python MEFinder.py
+'''
 
 The web version of our tool is available at the <a href="https://share.streamlit.io/mathyb/mathyb_dataset/main/MEFinder.py">project site</a>
 ## NNGen
