@@ -14,4 +14,4 @@ $ python MEFinder.py
 <li> You can test our tool on custom input at the web version of our tool available at the <a href="https://share.streamlit.io/mathyb/mathyb_dataset/main/MEFinder.py">project site</a></li></ul>
 
 ### NNGen
-We provide ME removed data for NNGen in this repo. Kindly refer to this Gihub repo https://github.com/Tbabm/nngen for commands on running the NNGen project.
+To evaluate NNGen with the modified data, download the dataset <b>NNGen_modified_data<b> from https://zenodo.org/record/3965149#.YSDic44zZPY and run the code from NNGen's Gihub repo https://github.com/Tbabm/nngen.
