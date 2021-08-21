@@ -1,41 +1,25 @@
-import streamlit as st
-import numpy as np
-import os
 import pandas as pd
 import re
-import csv
-import base64
-from st_aggrid import AgGrid
-import webbrowser
-import sys
-sys.path.insert(0, 'website')
-from website import load_css
-import load_css
-from load_css import local_css
 
 
-local_css("website/style.css")
+# In[2]:
 
-def remote_css(url):
-    st.markdown(f'<link href="{url}" rel="stylesheet">', unsafe_allow_html=True)    
-
-remote_css('https://fonts.googleapis.com/icon?family=Material+Icons')
-
-def get_table_download_link(df):
-    #csv = df.to_csv(index=False)
-    csv = df.to_csv().encode()
-    #b64 = base64.b64encode(csv.encode()).decode() 
-    b64 = base64.b64encode(csv).decode()
-    href = f'<a href="data:file/csv;base64,{b64}" download="ME_Finder.csv" target="_blank">Download csv file</a>'
-    return href
 
 # path for input, output and rules file
+
+INPUT_FILE = 'Bug_data_gcc.xlsx'
 OUTPUT_FILE = 'GCC.csv'
-RULE_FILE = 'ME_RULES.csv'
+RULE_FILE = 'MathB_Dataset/ME_RULES.csv'
 
 
+# In[3]:
+
+
+data = pd.read_excel(INPUT_FILE)
 me_rules = pd.read_csv(RULE_FILE)
 
+
+# In[4]:
 
 
 class MEFinder():
@@ -160,6 +144,7 @@ class MEFinder():
     # generates a dictionary containing description, status and instances for each Bug_Id
     def apply(self, me_dict, me_rules, file, rule_no, remove_status):
         file_copy = file
+        me_dict['Description'] = file
         me_dict['Rule_{}_status'.format(rule_no+1)] = {}
         list_obj=[self.rule1(me_rules,rule_no),self.rule2(me_rules,rule_no),self.rule3(me_rules,rule_no)
                   ,self.rule4(me_rules,rule_no),self.rule5(me_rules,rule_no),self.rule6(me_rules,rule_no)
@@ -213,49 +198,44 @@ class MEFinder():
                 return 0
 
 
-def main():
-	st.markdown("<h1 style='text-align: center; border-style: groove; background-color:#D22B2B; font-family:times new roman; font-size:100px bold;'>MEDSEA <br><br>Demonstration shown in the paper<br><br> MATHEMATICAL EXPRESSIONS IN SOFTWARE ENGINEERING ARTIFACTS </h1>", unsafe_allow_html=True)
-	st.text("")
-	st.text("")
-	col1,col2=st.columns(2)
-	with col1:
-		st.markdown( """<a style='display: block; text-align: center; font-family:times new roman; font-size:25px;' href="https://github.com/MathyB/MathyB_Dataset">Code</a> """, unsafe_allow_html=True, )
-	
-		
-	st.text("")
-	st.text("")
-	
-	data = st.text_area("Enter text to check for ME", "") 
-	
-		
-	if st.button("Run"):
-		obj = MEFinder()
-		sample_info = {}
-		output = -1
-		remove_status = True
-		flag=[]
-		for rule_no in range(12):
-        		flag.append(obj.apply(sample_info, me_rules, data, rule_no, remove_status))
-		if(sum(flag)>0):
-			st.success("ME Found")
-			output='1'
-			try:
-				
-				final_output=pd.DataFrame(sample_info).T
-
-			#final_output.reset_index(inplace=True)
-			#final_output.rename(columns={'index': 'Bug_Id'},inplace=True)
-			#final_output['Output']=output
-				st.markdown(get_table_download_link(final_output), unsafe_allow_html=True)
-				ss=pd.DataFrame(sample_info)
-				st.dataframe(ss)
-			except:
-				st.success("File display unavailable")
-		else:
-      			st.error("ME not Found")
-      			output='0'	
-		
+# In[ ]:
 
 
-		
-main()
+# Driver code
+obj = MEFinder()
+sample_info = {}
+output = []
+remove_status = True
+for i in range(len(data)):
+    flag=[]
+    sample_info[data['Bug_Id'].iloc[i]]={}
+    #sample_info[data['Bug_Id'].iloc[i]]['Description'] = data['Description'].iloc[i]
+    for rule_no in range(12):
+        flag.append(obj.apply(sample_info[data['Bug_Id'].iloc[i]], me_rules, data['Description'].iloc[i], rule_no, remove_status))
+    if(sum(flag)>0):
+        output.append(1)
+    else:
+        output.append(0)
+
+
+# In[ ]:
+
+
+#converting dict to dataframe
+
+final_output=pd.DataFrame(sample_info).T
+
+
+# In[ ]:
+
+
+final_output.reset_index(inplace=True)
+final_output.rename(columns={'index': 'Bug_Id'},inplace=True)
+final_output['Output']=output
+
+
+# In[ ]:
+
+
+final_output.to_csv(OUTPUT_FILE,index=False)
+
