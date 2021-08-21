@@ -221,7 +221,7 @@ def main():
 	st.text("")
 	st.text("")
 	
-	c1,c2,c3,c4,c5=st.columns(5)
+	c1,c2,c3,c4,c5,try=st.columns(6)
 	with c1:
 		c1='1'
 	with c2:
@@ -232,8 +232,10 @@ def main():
 		c4='4'
 	with c5:
 		c5='5'
+	with try:
+		try='Try'
 	
-	if st.button('1'):
+	if st.button('1',key=1):
 		data = st.text_area("Enter text to check for ME", "Functionality to be moved to 'Commons RNG' (cf. RNG-140).") 
 	
 		
@@ -263,38 +265,69 @@ def main():
 			else:
       				st.error("ME not Found")
       				output='0'	
-		
-	
-	
-	data = st.text_area("Enter text to check for ME", "") 
-	
-		
-	if st.button("Run"):
-		obj = MEFinder()
-		sample_info = {}
-		output = -1
-		remove_status = True
-		flag=[]
-		for rule_no in range(12):
-        		flag.append(obj.apply(sample_info, me_rules, data, rule_no, remove_status))
-		if(sum(flag)>0):
-			st.success("ME Found")
-			output='1'
-			try:
 				
-				final_output=pd.DataFrame(sample_info).T
+	if st.button('2',key=2):
+		data = st.text_area("Enter text to check for ME", "Functionality to be moved to 'Commons RNG' (cf. RNG-140).") 
+	
+		
+		if st.button("Run"):
+			obj = MEFinder()
+			sample_info = {}
+			output = -1
+			remove_status = True
+			flag=[]
+			for rule_no in range(12):
+        			flag.append(obj.apply(sample_info, me_rules, data, rule_no, remove_status))
+			if(sum(flag)>0):
+				st.success("ME Found")
+				output='1'
+				try:
+				
+					final_output=pd.DataFrame(sample_info).T
 
-			#final_output.reset_index(inplace=True)
-			#final_output.rename(columns={'index': 'Bug_Id'},inplace=True)
-			#final_output['Output']=output
-				st.markdown(get_table_download_link(final_output), unsafe_allow_html=True)
-				ss=pd.DataFrame(sample_info)
-				st.dataframe(ss)
-			except:
-				st.success("File display unavailable")
-		else:
-      			st.error("ME not Found")
-      			output='0'	
+					#final_output.reset_index(inplace=True)
+					#final_output.rename(columns={'index': 'Bug_Id'},inplace=True)
+					#final_output['Output']=output
+					st.markdown(get_table_download_link(final_output), unsafe_allow_html=True)
+					ss=pd.DataFrame(sample_info)
+					st.dataframe(ss)
+				except:
+					st.success("File display unavailable")
+			else:
+      				st.error("ME not Found")
+      				output='0'	
+	
+	if st.button('Try',key=6):
+		data = st.text_area("Enter text to check for ME", "Functionality to be moved to 'Commons RNG' (cf. RNG-140).") 
+	
+		
+		if st.button("Run"):
+			obj = MEFinder()
+			sample_info = {}
+			output = -1
+			remove_status = True
+			flag=[]
+			for rule_no in range(12):
+        			flag.append(obj.apply(sample_info, me_rules, data, rule_no, remove_status))
+			if(sum(flag)>0):
+				st.success("ME Found")
+				output='1'
+				try:
+				
+					final_output=pd.DataFrame(sample_info).T
+
+					#final_output.reset_index(inplace=True)
+					#final_output.rename(columns={'index': 'Bug_Id'},inplace=True)
+					#final_output['Output']=output
+					st.markdown(get_table_download_link(final_output), unsafe_allow_html=True)
+					ss=pd.DataFrame(sample_info)
+					st.dataframe(ss)
+				except:
+					st.success("File display unavailable")
+			else:
+      				st.error("ME not Found")
+      				output='0'	
+	
 		
 
 
