@@ -286,7 +286,7 @@ def main():
 	data = st.text_area("Enter text to check for ME", "") 
 	
 		
-	if st.button("Run"):
+	if st.button("Run",key="3"):
 		obj = MEFinder()
 		sample_info = {}
 		output = -1
