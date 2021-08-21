@@ -221,7 +221,7 @@ def main():
 	st.text("")
 	st.text("")
 	
-	c1,c2,c3,c4,c5,try=st.columns(6)
+	c1,c2,c3,c4,c5,c6=st.columns(6)
 	with c1:
 		c1='1'
 	with c2:
@@ -232,8 +232,8 @@ def main():
 		c4='4'
 	with c5:
 		c5='5'
-	with try:
-		try='Try'
+	with c6:
+		c6='Try'
 	
 	if st.button('1',key=1):
 		data = st.text_area("Enter text to check for ME", "Functionality to be moved to 'Commons RNG' (cf. RNG-140).") 
