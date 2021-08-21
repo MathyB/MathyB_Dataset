@@ -281,7 +281,7 @@ def main():
       				st.error("ME not Found")
       				output='0'	
 	
-	st.title("TRY IT YOURSELF")
+	st.markdown("<h2 style='text-align: center; border-style: groove; font-family:times new roman; font-size:20px;'> TRY IT YOURSELF </h2>", unsafe_allow_html=True)
 	
 	data = st.text_area("Enter text to check for ME", "") 
 	
