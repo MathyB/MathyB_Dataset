@@ -6,10 +6,15 @@ import re
 import csv
 import base64
 from st_aggrid import AgGrid
-from load_css import local_css
 import webbrowser
+import sys
+sys.path.insert(0, 'website')
+from website import load_css
+import load_css
+from load_css import local_css
 
-local_css("style.css")
+
+local_css("website/style.css")
 
 def remote_css(url):
     st.markdown(f'<link href="{url}" rel="stylesheet">', unsafe_allow_html=True)    
@@ -240,14 +245,18 @@ def main():
 		if(sum(flag)>0):
 			st.success("ME Found")
 			output='1'
-			final_output=pd.DataFrame(sample_info).T
+			try:
+				
+				final_output=pd.DataFrame(sample_info).T
 
 			#final_output.reset_index(inplace=True)
 			#final_output.rename(columns={'index': 'Bug_Id'},inplace=True)
 			#final_output['Output']=output
-			st.markdown(get_table_download_link(final_output), unsafe_allow_html=True)
-			ss=pd.DataFrame(sample_info)
-			st.dataframe(ss)
+				st.markdown(get_table_download_link(final_output), unsafe_allow_html=True)
+				ss=pd.DataFrame(sample_info)
+				st.dataframe(ss)
+			except:
+				st.success("File display unavailable")
 		else:
       			st.error("ME not Found")
       			output='0'	
