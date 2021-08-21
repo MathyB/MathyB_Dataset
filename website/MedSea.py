@@ -222,8 +222,8 @@ def main():
 	st.text("")
 	
 	c1,c2,c3,c4,c5,c6=st.columns(6)
-	with c1:
-		st.button('1',key="1")
+	
+	c1=st.button('1',key="1")
 	with c2:
 		st.button('2',key="2")
 	with c3:
