@@ -217,7 +217,7 @@ def main():
 	
 	col1, col2,col3,col4,col5 = st.columns(5)
 	with col1:
-		st.markdown( """<a style='display: block; text-align: center; font-family:times new roman; font-size:20px;' href="https://github.com/MathyB/MathyB_Dataset">Github Repository</a> """, unsafe_alhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQffhsjSSxdFA2TX4iQmSaw1eHkv1Zr1ZAPEQ&usqp=CAUlow_html=True, )
+		st.markdown( """<a style='display: block; text-align: center; font-family:times new roman; font-size:20px;' href="https://github.com/MathyB/MathyB_Dataset">Github Repository</a> """, unsafe_allow_html=True, )
 
 	
 	
