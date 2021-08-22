@@ -219,7 +219,16 @@ def main():
 	col1, col2,col3,col4,col5 = st.columns(5)
 	with col1:
 		st.markdown("[![Github](https://bsmedia.business-standard.com/_media/bs/img/article/2020-02/13/full/1581607900-9541.jpg)](https://github.com/MathyB/MathyB_Dataset)")
-		
+	with col2:
+		st.markdown("[![Github](https://bsmedia.business-standard.com/_media/bs/img/article/2020-02/13/full/1581607900-9541.jpg)](https://github.com/MathyB/MathyB_Dataset)")
+	with col3:
+		st.markdown("[![Github](https://bsmedia.business-standard.com/_media/bs/img/article/2020-02/13/full/1581607900-9541.jpg)](https://github.com/MathyB/MathyB_Dataset)")
+	with col4:
+		st.markdown("[![Github](https://bsmedia.business-standard.com/_media/bs/img/article/2020-02/13/full/1581607900-9541.jpg)](https://github.com/MathyB/MathyB_Dataset)")
+	with col5:
+		st.markdown("[![Github](https://bsmedia.business-standard.com/_media/bs/img/article/2020-02/13/full/1581607900-9541.jpg)](https://github.com/MathyB/MathyB_Dataset)")
+	
+	
 	st.text("")
 	st.text("")
 
