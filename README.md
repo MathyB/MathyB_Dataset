@@ -11,6 +11,10 @@
 ```python
 $ python MEFinder.py -input_path [path of the input project file which should be a .xlsx file] -output_path [path of the output file which should be a .csv file] - preprocessing [True or False]
 ```
+The default settings are:
+```python
+$ python MEFinder.py -input_path Bug_data_linux.xlsx -output_path LINUX.csv - preprocessing True
+```
 <ul>
 <li> You can test our tool on custom input at the web version of our tool available at the <a href="https://share.streamlit.io/mathyb/mathyb_dataset/main/website/MedSea.py">project site</a></li></ul>
 
