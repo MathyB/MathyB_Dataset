@@ -1,6 +1,11 @@
 .highlight {
   font-size: 30px;
 }
+
+.ht {
+  font-size: 20px;
+  color:black;
+}
 .bold {
   padding-left: 1rem;
   font-weight: 700;
