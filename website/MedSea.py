@@ -216,7 +216,10 @@ def main():
 	
 	
 	#st.markdown( """<a style='display: block; text-align: center; font-family:times new roman; font-size:20px;' href="https://github.com/MathyB/MathyB_Dataset">Github Repository</a> """, unsafe_alhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQffhsjSSxdFA2TX4iQmSaw1eHkv1Zr1ZAPEQ&usqp=CAUlow_html=True, )
-	st.markdown("[![Github](https://github.com/MathyB/MathyB_Dataset/website/gg2.jpg)](https://github.com/MathyB/MathyB_Dataset)")
+	col1, col2 = st.columns(2)
+	with col1:
+		st.image('website/gg2.jpg', width=60)
+		st.markdown("[![Github](https://github.com/MathyB/MathyB_Dataset/website/gg2.jpg)](https://github.com/MathyB/MathyB_Dataset)")
 		
 	st.text("")
 	st.text("")
