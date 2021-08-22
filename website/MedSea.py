@@ -220,7 +220,7 @@ def main():
 	st.text("")
 	st.text("")
 
-	st.markdown("<h2 style='text-align: center; border-style: ridge; font-family:serif; font-size:20px;'> EXAMPLES </h2>", unsafe_allow_html=True)
+	st.markdown("<h2 style='text-align: center; border-style: ridge; font-family:serif; font-size:20px; font-weight:bold;'> EXAMPLES </h2>", unsafe_allow_html=True)
 	st.text("")
 	c1,c2=st.columns(2)
 	
@@ -284,7 +284,7 @@ def main():
       				output='0'	
 	
 	st.text("")
-	st.markdown("<h2 style='text-align: center; border-style: ridge; font-family:serif; font-size:20px;'> TRY IT YOURSELF </h2>", unsafe_allow_html=True)
+	st.markdown("<h2 style='text-align: center; border-style: ridge; font-family:serif; font-size:20px;font-weight:bold;'> TRY IT YOURSELF </h2>", unsafe_allow_html=True)
 	st.text("")
 	data = st.text_area("Enter text to check for ME", "",height=250) 
 	
