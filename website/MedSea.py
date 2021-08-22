@@ -218,15 +218,7 @@ def main():
 	#st.markdown( """<a style='display: block; text-align: center; font-family:times new roman; font-size:20px;' href="https://github.com/MathyB/MathyB_Dataset">Github Repository</a> """, unsafe_alhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQffhsjSSxdFA2TX4iQmSaw1eHkv1Zr1ZAPEQ&usqp=CAUlow_html=True, )
 	col1, col2,col3,col4,col5 = st.columns(5)
 	with col1:
-		st.markdown("[![Github](https://bsmedia.business-standard.com/_media/bs/img/article/2020-02/13/full/1581607900-9541.jpg)](https://github.com/MathyB/MathyB_Dataset)")
-	with col2:
-		st.markdown("[![Github](https://bsmedia.business-standard.com/_media/bs/img/article/2020-02/13/full/1581607900-9541.jpg)](https://github.com/MathyB/MathyB_Dataset)")
-	with col3:
-		st.markdown("[![Github](https://bsmedia.business-standard.com/_media/bs/img/article/2020-02/13/full/1581607900-9541.jpg)](https://github.com/MathyB/MathyB_Dataset)")
-	with col4:
-		st.markdown("[![Github](https://bsmedia.business-standard.com/_media/bs/img/article/2020-02/13/full/1581607900-9541.jpg)](https://github.com/MathyB/MathyB_Dataset)")
-	with col5:
-		st.markdown("[![Github](https://bsmedia.business-standard.com/_media/bs/img/article/2020-02/13/full/1581607900-9541.jpg)](https://github.com/MathyB/MathyB_Dataset)")
+		st.markdown("[![Github](https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_505df21738edbe9baababa9d60be291d/github.png)](https://github.com/MathyB/MathyB_Dataset)")
 	
 	
 	st.text("")
