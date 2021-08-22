@@ -215,7 +215,7 @@ def main():
 	st.text("")
 	
 	
-	col1, mid, col2 = st.columns([1,1,20])
+	col1, mid, col2 = st.columns([1,0.5,20])
 	with col1:
                 st.image('website/gg1.jpg', width=45)
 	with col2:
