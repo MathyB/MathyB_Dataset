@@ -216,7 +216,7 @@ def main():
 	
 	a1,mid,a2=st.columns([1,1,20])
 	with a1:
-		st.image('red.jpg', width=60)
+		st.image('website/red.jpg', width=60)
 	with a2:
 		st.markdown( """<a style='display: block; text-align: center; font-family:times new roman; font-size:20px;' href="https://github.com/MathyB/MathyB_Dataset">Github Repository</a> """, unsafe_allow_html=True, )
 	
