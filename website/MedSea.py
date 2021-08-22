@@ -216,7 +216,7 @@ def main():
 	
 	
 	#st.markdown( """<a style='display: block; text-align: center; font-family:times new roman; font-size:20px;' href="https://github.com/MathyB/MathyB_Dataset">Github Repository</a> """, unsafe_allow_html=True, )
-	st.markdown("[![Github](https://vardhaman.org/wp-content/uploads/2020/10/github-300x169.jpg)](https://github.com/MathyB/MathyB_Dataset)")
+	st.markdown("[![Github](https://www.seekpng.com/png/full/192-1923013_transparent-png-github-logo.png)](https://github.com/MathyB/MathyB_Dataset)")
 		
 	st.text("")
 	st.text("")
