@@ -1,7 +1,7 @@
 # Mathematical Expressions in Software Engineering Artifacts
 ### MathyB dataset
 <ul>
-<li>To run MEDSEA: A Mathematical Expression Detector Tool for Software Engineering Artifacts on projects mentioned in the paper, download the folder <b>Bug_data</b> from https://zenodo.org/record/5229831#.YSFg644zZPY. </li>
+<li>To run MEDSEA: A Mathematical Expression Detector Tool for Software Engineering Artifacts on projects mentioned in the paper, download the folder <b>Bug_data</b> from https://zenodo.org/record/5233542#.YSKRDo4zZPY. </li>
 <li>Then run this command:</li>
 </ul>
 
@@ -18,4 +18,4 @@ $ python MEFinder.py -input_path Bug_data_linux.xlsx -output_path LINUX.csv - pr
 <li> You can test our tool on custom input at the web version of our tool available at the <a href="https://share.streamlit.io/mathyb/mathyb_dataset/main/website/MedSea.py">project site</a></li></ul>
 
 ### NNGen
-To evaluate NNGen with the modified data (Mathematical Expression removed code differences), download the dataset <b>NNGen_modified_data</b> from https://zenodo.org/record/5229831#.YSFg644zZPY and follow the instructions at https://github.com/Tbabm/nngen to execute the NNGen task.
+To evaluate NNGen with the modified data (Mathematical Expression removed code differences), download the dataset <b>NNGen_modified_data</b> from https://zenodo.org/record/5233542#.YSKRDo4zZPY and follow the instructions at https://github.com/Tbabm/nngen to execute the NNGen task.
