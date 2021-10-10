@@ -1,7 +1,7 @@
 # Mathematical Expressions in Software Engineering Artifacts
 ### MathyB dataset
 <ul>
-<li>To run MEDSEA: A Mathematical Expression Detector Tool for Software Engineering Artifacts on projects mentioned in the paper, download the folder <b>Bug_data</b> from https://zenodo.org/record/5233542#.YSKRDo4zZPY. </li>
+<li>To run MEDSEA: A Mathematical Expression Detector Tool for Software Engineering Artifacts on projects mentioned in the paper, download the folder <b>Bug_data</b> from https://doi.org/10.5281/zenodo.5559242. </li>
 <li>Then run this command:</li>
 </ul>
 
