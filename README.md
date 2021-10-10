@@ -6,11 +6,11 @@
 </ul>
 
 ```python
-$ python MEFinder.py -input_path [path of the input project file which should be a .xlsx file] -output_path [path of the output file which should be a .csv file] -preprocessing [True or False]
+$ python MEFinder.py -input_path [path of the input project file which should be a .xlsx file] -output_path [path of the output file which should be a .csv file] -preprocess [True or False]
 ```
 The default settings are:
 ```python
-$ python MEFinder.py -input_path Bug_data_linux.xlsx -output_path LINUX.csv -preprocessing True
+$ python MEFinder.py -input_path Bug_data_linux.xlsx -output_path LINUX.csv -preprocess True
 ```
 <ul>
 <li> Set <b>input_path</b> to the .xlsx file of the project in <b>Bug_data</b> folder that you want to execute. Also, set <b>preprocessing</b> to <b>False</b> if you do not want to remove URLs and collection of black listed words.</li>
