@@ -6,7 +6,7 @@
 </ul>
 
 ```python
-$ python MEFinder.py -input_path [path of the input project file which should be a .xlsx file] -output_path [path of the output file which should be a .csv file] - preprocessing [True or False]
+$ python MEFinder.py -input_path [path of the input project file which should be a .xlsx file] -output_path [path of the output file which should be a .csv file] -preprocessing [True or False]
 ```
 The default settings are:
 ```python
