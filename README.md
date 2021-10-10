@@ -18,4 +18,4 @@ $ python MEFinder.py -input_path Bug_data_linux.xlsx -output_path LINUX.csv -pre
 <li> You can test our tool on custom input at the web version of our tool available at the <a href="https://med-sea.herokuapp.com/">project site</a>.</li></ul>
 
 ### NNGen
-To evaluate NNGen with the modified data (Mathematical Expression removed code differences), download the dataset <b>NNGen_modified_data</b> from https://zenodo.org/record/5233542#.YSKRDo4zZPY and follow the instructions at https://github.com/Tbabm/nngen to execute the NNGen task.
+To evaluate NNGen with the modified data (Mathematical Expression removed code differences), download the dataset <b>NNGen_modified_data</b> from https://doi.org/10.5281/zenodo.5559242 and follow the instructions at https://github.com/Tbabm/nngen to execute the NNGen task.
