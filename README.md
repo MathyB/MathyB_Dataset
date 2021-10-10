@@ -13,7 +13,7 @@ The default settings are:
 $ python MEFinder.py -input_path Bug_data_linux.xlsx -output_path LINUX.csv -preprocess True
 ```
 <ul>
-<li> Set <b>input_path</b> to the .xlsx file of the project in <b>Bug_data</b> folder that you want to execute. Also, set <b>preprocessing</b> to <b>False</b> if you do not want to remove URLs and collection of black listed words.</li>
+<li> Set <b>input_path</b> to the .xlsx file of the project in <b>Bug_data</b> folder that you want to execute. Also, set <b>preprocess</b> to <b>False</b> if you do not want to remove URLs and collection of black listed words.</li>
 <li> Each column in <b>ME_RULES.csv</b> corresponds to the collection of operators or mathemtical fucntions corresponding to that rule. Columns corresponding to rules 1 to 12 are named so in the file. The last column is the collection of black listed words. If you want to add/remove regex based rules then change them accordingly in the ME_RULES.csv file and in MEFinder.py. Make sure ME_remove_words is the last column in the file. </li>
 <li> You can test our tool on custom input at the web version of our tool available at the <a href="https://med-sea.herokuapp.com/">project site</a>.</li></ul>
 
